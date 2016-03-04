@@ -1,0 +1,150 @@
+@import "../g.less";
+
+//主背景灰
+@colorBack: #ffffff;
+//次背景灰亮
+@colorBackTwo: #f6f8f8;
+//左侧导航背景
+@leftNavBack: #fff;
+//左侧导航字体颜色深
+@leftNavBackFont: #151515;
+//左侧导航字体颜色亮
+@leftNavBackFontHeight: #564aa3;
+.allDiv {
+  //主div
+  .all();
+  .allHeight();
+  .clear();
+  overflow: auto;
+  background-color: @colorBack;
+  .topHeader {
+    .all();
+    .clear();
+    height: 50px;
+    background-color: #fff;
+    .boxShadow(0px, 0px, 3px, 0.3);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    #leftLogo {
+      .all(10, 2);
+      .cText();
+      height: 33px;
+      padding-top: 0.9rem;
+      overflow: hidden;
+      background-color: @leftNavBack;
+      color: @leftNavBackFont;
+      font-size: 1.6rem;
+      &:hover {
+        //        color: @leftNavBackFont + 111;
+      }
+      i {
+        color: @leftNavBackFont;
+      }
+    }
+
+    #rightHeader {
+      .search {
+        input {
+          width: 100px;
+          .mt();
+          .ml(20);
+          .left;
+          border: solid 1px @leftNavBack;
+        }
+        button {
+          .ml();
+          .mt();
+          .left;
+        }
+      }
+
+      .listRight {
+        position: fixed;
+        z-index: 30;
+        right: 0px;
+        .mt(13);
+        margin-right: 2rem;
+        width: 100px;
+        .listItem {
+          width: 100px;
+          .clear();
+          background-color: @colorBack;
+          li {
+            padding: 10px;
+            list-style-type: none;
+            &:hover {
+              background-color: @leftNavBack;
+              color: @leftNavBackFont;
+            }
+          }
+          border: solid 1px @leftNavBack;
+        }
+      }
+    }
+
+  }
+  .contentDiv {
+    .all();
+    .clear();
+    .allHeight();
+    position: fixed;
+    z-index: 0;
+    margin-top: 50px;
+    #block1 {
+      .topHeader #leftLogo;
+      .allHeight();
+      .all(10, 2);
+      overflow: scroll;
+      text-align: left;
+    }
+    #block2 {
+      .allHeight();
+      .all(10, 3);
+      overflow: scroll;
+      //      border-right: solid 1px @colorBack - 111;
+      .boxShadow(0px, 0px, 1px, 0.3);
+      margin-bottom: -3rem;
+      ul {
+        .ml(20)
+      }
+    }
+    #block3 {
+      .allHeight();
+      .all(10, 5);
+      overflow: scroll;
+      background-color: @colorBackTwo;
+      .boxShadow(0px, 0px, 1px, 0.3);
+    }
+  }
+
+  .editTitle {
+    .left;
+    font-size: 14px;
+    width: 70px;
+    .mt(3);
+  }
+  .editDiv {
+    .ml(20);
+    .mt(20);
+    margin-bottom: 60px;
+  }
+
+  .h6Left {
+    color: #296119;
+    padding-left: 15px;
+  }
+
+  .h6LeftThis {
+    border-left: solid 10px @leftNavBackFont;
+    padding-left: 5px;
+    color: @leftNavBackFont;
+  }
+}
+
+.big{
+  font-size: 18px;
+  color: red;
+}

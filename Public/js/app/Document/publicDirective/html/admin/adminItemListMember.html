@@ -1,0 +1,8 @@
+<div class="clear editDiv">
+    <div class="clear" ng-repeat="vo1 in admin.category">
+        <h5 style="margin-left: 10px">{{vo1.name}}</h5>
+        <h6  class="linkMouse h6Left " ng-click="UI.chickThis($event)"  complie-click divId="{{vo2.divId}}" tag="{{vo2.tag}}" urlItem="{{vo2.urlItem}}" title="{{vo2.title}}" ng-if="vo2.pid == vo1.id" editUrl="{{vo2.editUrl}}" delUrl="{{vo2.delUrl}}" ng-repeat="vo2 in admin.categoryTwo">
+            {{vo2.name}}</h6>
+        <hr/>
+    </div>
+</div>

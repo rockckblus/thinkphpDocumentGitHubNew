@@ -1,0 +1,25 @@
+<div class="editDiv">
+    <div>
+        <h4>
+            <i class="icon-arrow-right"></i>
+            {{title}}
+        </h4>
+
+        <hr/>
+
+        <div class="clear" ng-repeat="vo in subData.moreFor">
+            <div class="editTitle">
+                标题{{vo}}
+            </div>
+            <div class="editInput">
+                <input type="text" name="topName[]" style="width: 100px" class="left"/>
+            </div>
+
+        </div>
+
+        <hr/>
+
+    </div>
+
+    <button class="btn btn-default btn-inverse" ng-click="fun.subClick()">sub</button>
+</div>

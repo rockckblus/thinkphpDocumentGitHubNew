@@ -1,0 +1,38 @@
+<div class="clear editDiv">
+    <h5>{{title}}</h5>
+
+    <!--<div class="clear" ng-repeat="vo in list.cate">-->
+        <!--<div class="clear" style="margin-left: 20px">-->
+        <!--<span class="linkMouse h6Left" style="font-size: 12px" ng-click="UI.chickThis($event)" complie-click-->
+              <!--divid="block2" tag="one-three"-->
+              <!--urlitem="{{vo._id}}" title="{{vo.name}}">{{vo.name}}</span>-->
+        <!--</div>-->
+
+        <!--<hr/>-->
+    <!--</div>-->
+
+    <div class="clear" ng-repeat="vo in list.contentName">
+        <div class="clear" style="margin-left: 20px">
+        <span class="linkMouse h6Left" style="font-size: 12px;color: #002a80" ng-click="UI.chickThis($event)"
+              complie-click
+              divId="block3"
+              tag="content" urlitem="{{vo._id}}" title="{{vo.name}}">cate::{{vo.name}}</span>
+        </div>
+
+        <hr/>
+    </div>
+
+    <div id="height">
+        <div class="clear" ng-repeat="vo in list.content">
+            <div class="clear" style="margin-left: 20px">
+                <span class="clear" style="color: #002a80">{{vo.name}}</span>
+        <span class="linkMouse h6Left" style="font-size: 12px;color: red"
+              ng-bind-html="vo.content | toHtml"></span>
+            </div>
+
+            <hr/>
+        </div>
+
+    </div>
+
+</div>

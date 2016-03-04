@@ -1,0 +1,44 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/Public/css/DocumentCss/index.css"/>
+    <link rel="stylesheet" href="/Public/css/DocumentCss/bootstrap.min.css"/>
+    <title></title>
+</head>
+<body ng-controller="bodyAll" class="angularEnd">
+<div class="allDiv" ng-controller="allDiv" style="overflow-y: auto">
+    <top-header></top-header>
+    <div class="contentDiv" id="contentDiv">
+        <div id="block1">
+            <?php echo ($d1); ?>
+        </div>
+        <div id="block2">
+            <?php echo ($d2); ?>
+        </div>
+        <div id="block3">
+            <?php echo ($d3); ?>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+<!--百度编辑器-->
+<script src="/Public/js/app/Document/publicDirective/js/plguin/editer/jquery.min.js"></script>
+<script src="/Public/js/app/Document/publicDirective/js/plguin/editer/umeditor.config.js"></script>
+<script src="/Public/js/app/Document/publicDirective/js/plguin/editer/html/editor_api.js"></script>
+
+<script src="/Public/js/sea.js"></script>
+<script>
+    seajs.config({
+        debug: false
+    });
+    seajs.use(["/Public/js/app/Public/g.js", "/Public/js/app/Document/Index/index.js"], function () {
+        angular.element(document).ready(function () {
+            angular.bootstrap(window.document, ["myApp"]); //启动angular
+        })
+
+    })
+</script>
+</html>

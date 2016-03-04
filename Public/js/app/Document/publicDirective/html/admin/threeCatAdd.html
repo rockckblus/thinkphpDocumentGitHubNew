@@ -1,0 +1,30 @@
+<div class="clear editDiv">
+    <div>
+        <h4>
+            <i class="icon-arrow-right"></i>
+            {{title}}
+        </h4>
+        <hr/>
+        <div class="clear" ng-if="vo.pid == '0'" ng-repeat="vo in list">
+            <div class="editInput">
+                <div class="left" style="font-size: 16px">{{vo.name}}</div>
+
+                <hr/>
+
+                <div class="clear" style="margin-left: 20px" ng-repeat="vo2 in list" ng-if="vo2.pid == vo._id">
+
+                    <div class="left" style="font-size: 14px;margin-top: 8px">|_{{vo2.name}}</div>
+                    <div class="left linkMouse " style="margin-top:8px;margin-left: 10px;color: red;font-size: 12px"
+                         ng-click="UI.chickThis($event)"
+                         complie-click
+                         divid="block3" tag="admin-three-cat-add-in" urlitem="{{vo2._id}}" title="{{vo2.name}}|添加三级分类">
+                        +添加修改删除三级分类
+                    </div>
+                </div>
+
+
+            </div>
+            <hr/>
+        </div>
+    </div>
+</div>

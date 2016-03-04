@@ -1,0 +1,24 @@
+<div class="topHeader">
+    <div id="leftLogo" class="linkMouse" onclick="location.reload();">{{topHeader.item.thisItem}}</div>
+    <div id="rightHeader" class="">
+        <div class="search left">
+            <input type="text" ng-model="search"/>
+            <button class="btn btn-default btn-inverse" complie-click divId="block2" tag="search" urlItem="{{search}}"
+                    title="{{search}} 搜索">搜索
+            </button>
+        </div>
+        <div class="left " style="margin-left: 30px;margin-top: 10px">
+            <input class="left " type="text" style="width: 100px" ng-model="passWord"/>
+            <button class="btn btn-default btn-inverse" style="margin-left: 10px" ng-click="sub()">adminPassWord
+            </button>
+        </div>
+        <this-url></this-url>
+        <div class="right linkMouse" ng-show="amdinShow" complie-click divId="block1" tag="{{adminTag}}"
+             style="margin-top: 13px;margin-right: 200px">
+            <i class="icon-adjust"></i>admin
+        </div>
+        <div class="listRight">
+            <item-list></item-list>
+        </div>
+    </div>
+</div>

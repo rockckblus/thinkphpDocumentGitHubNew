@@ -1,0 +1,6 @@
+<div class="itemListTitle linkMouse" ng-click="fun.itemListTitleClick()"><i class="icon-hand-up"></i> 项目列表 {{ui.listItemTitleIcon}}</div>
+<div class="listItem" ng-show="ui.listItemDiv">
+    <li  ng-repeat="vo in item" class="linkMouse" ng-click="fun.changeThisItem(vo)">
+        {{vo.name | toHtml}}
+    </li>
+</div>

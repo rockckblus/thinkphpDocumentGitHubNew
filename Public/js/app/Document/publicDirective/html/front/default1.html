@@ -1,0 +1,26 @@
+<div class="clear editDiv">
+
+
+    <div class="clear" ng-repeat="vo1 in list">
+        <div class="clear" ng-if="(vo1.pid == '0') && vo1.name">
+            <h5 style="margin-left: 10px">{{vo1.name}}</h5>
+
+
+            <div class="clear" ng-if="vo2.pid == vo1._id" ng-repeat="vo2 in list">
+                <h6 class="linkMouse h6Left " ng-click="UI.chickThis($event)" complie-click divId="block2"
+                    tag="list-three" urlitem="{{vo2._id}}"
+                        >{{vo2.name}}</h6>
+
+
+                <div class="clear" style="margin-left: 20px" ng-if="vo3.pid == vo2._id" ng-repeat="vo3 in list">
+                    <span class="linkMouse h6Left" style="font-size: 12px" ng-click="UI.chickThis($event)" complie-click
+                          divId="block2"
+                          tag="one-three" title="{{vo3.name}}" urlitem="{{vo3._id}}">{{vo3.name}}</span>
+                </div>
+
+            </div>
+
+            <hr ng-if="vo1.pid == '0'"/>
+        </div>
+    </div>
+</div>

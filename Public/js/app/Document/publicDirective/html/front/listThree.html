@@ -1,0 +1,15 @@
+<div class="clear editDiv">
+    <div class="clear" ng-repeat="vo in list">
+        <h5>{{vo.name}}</h5>
+
+        <div class="clear" style="margin-left: 20px" ng-if="vo._id == vo2.catId" ng-repeat="vo2 in contentList">
+        <span class="linkMouse h6Left" style="font-size: 12px" ng-click="UI.chickThis($event)" complie-click
+              divId="block3"
+              tag="content" urlitem="{{vo2._id}}" title="{{vo2.name}}">{{vo2.name}}</span>
+              <hr/>
+
+        </div>
+
+        <hr/>
+    </div>
+</div>

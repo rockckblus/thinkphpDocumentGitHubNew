@@ -1,0 +1,73 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5标签初始化
+--------------------------------------------------*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* 标签初始化
+--------------------------------------------------*/
+body { line-height: 1; color:#333;font:14px/1.5 "微软雅黑",Arial, Helvetica, Verdana, sans-serif}
+ol, ul { list-style: none; }
+blockquote, q {
+  quotes: none;
+  border-left: solid 4px #39c;
+  margin-left: 10px;
+  padding-left: 10px;
+  background: whitesmoke;
+  margin: 10px auto;
+  padding: 6px 10px;
+  color: #666;
+  font-size: 20px;
+}
+i{
+  font-style: normal;
+  font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+a img{ border:0; }
+h1{ font-size:24px; }
+h2{ font-size:20px; }
+h3{ font-size:18px; }
+h4{ font-size:14px; }
+h5, h6{ font-size:12px; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+div{display:block;}
+
+//公共style .mt .ml .all .clear .left .right .c .linkMouse .hide .angualrEnd
+html,body{height: 100%} .c{margin: 0 auto} .cText{text-align: center}
+.mt(@top:10) {  margin-top: unit(@top, px);  }  .ml(@left:10) {  margin-left: unit(@left, px);  }
+//.all() 用法 传入 number 1，就是按百分比居中,不传就是按百分比几份
+.all(@all:10,@num:10,@one:'1') {  @item: 100% / @all;  width: @item * @num;  .left;  }
+.all(@all:10,@num:10,@one:'1') when (isnumber(@one)) {  @item: 100% / @all;  margin-left: @item * ((@all - @num) / 2); }
+.left {  float: left;  }.right{float: right}
+.clear {  zoom: 1; &:after {  clear: both;  content: "";  display: table;  } &:before {  content: "";  display: table;  } }
+.hide {  display: none;  }  .angularEnd {  display: none;  }  .linkMouse {  cursor: pointer;  }
+//.all() 用法 传入
+.allHeight(@all:10,@num:10,@mTop:0) {  @item: 100% / @all;  height: @item * @num;  .clear; }
+
+//.boxShadow 阴影
+.boxShadow(@x: 0px, @y: 0px, @blur: 8px, @alpha: 0.5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//#demo{
+//  .box-shadow(0px, 0px, 20px, 0.4);
+//}
+

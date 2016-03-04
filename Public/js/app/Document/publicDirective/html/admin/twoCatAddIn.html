@@ -1,0 +1,37 @@
+<div class="editDiv">
+    <div>
+        <h4>
+            <i class="icon-arrow-right"></i>
+            {{title}}
+        </h4>
+
+
+        <hr/>
+
+        <div class="clear">
+            <div class="clear" ng-repeat="vo in list">
+                <input type="text" ng-model="vo.name"/>
+                <button class="btn" ng-click="fun.edit($event)" _id="{{vo._id}}" name="{{vo.name}}">修改</button>
+                <button class="btn" ng-click="fun.del(vo._id)">删除</button>
+            </div>
+        </div>
+
+
+        <hr/>
+
+        <div class="clear" ng-repeat="vo in subData.moreFor">
+            <div class="editTitle">
+                标题{{vo}}
+            </div>
+            <div class="editInput">
+                <input type="text" name="topName[]" style="width: 100px" class="left"/>
+            </div>
+
+        </div>
+
+        <hr/>
+
+    </div>
+
+    <button class="btn btn-default btn-inverse" ng-click="fun.subClick()">sub</button>
+</div>
