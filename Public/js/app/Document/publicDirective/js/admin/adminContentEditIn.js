@@ -27,7 +27,7 @@ define(function (require) {
                                     $scope.from.content = re.content;
 
                                 })
-                            }, 0);
+                            }, 800);
                         })
                     },
 
