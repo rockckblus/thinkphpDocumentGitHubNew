@@ -25,9 +25,8 @@ define(function (require) {
                                     // re = re[$scope.id];
                                     $scope.from.name = re.name;
                                     $scope.from.content = re.content;
-                                    $scope.content = re.content;
                                 })
-                            }, 800);
+                            }, 0);
                         })
                     },
 
@@ -73,6 +72,7 @@ define(function (require) {
                 scope.id = attrs.urlitem;
                 scope.title = attrs.title;
                 scope.content = attrs.editurl;
+                scope.content = 'ksdkfsdfk';
             }
         }
 
