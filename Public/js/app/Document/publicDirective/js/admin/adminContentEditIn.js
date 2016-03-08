@@ -19,10 +19,10 @@ define(function (require) {
                 $scope.fun = {
                     contentList: function () {
                         cateData.getContent($scope.id, function (re) {
-                        	console.log('editInRe',re);
+                        	// console.log('editInRe',re);
                             setTimeout(function () {
                                 $scope.$apply(function () {
-                                    re = re[$scope.id];
+                                    // re = re[$scope.id];
                                     $scope.from.name = re.name;
                                     $scope.from.content = re.content;
 
