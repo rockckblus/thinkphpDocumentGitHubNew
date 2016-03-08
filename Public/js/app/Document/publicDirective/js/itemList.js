@@ -13,7 +13,7 @@ define(function (require) {
                 $scope.ui = {
                     listItemDiv: false,//下拉div默认关闭
                     listItemTitleIcon: '+',//右侧图标
-                }
+                };
 
                 $scope.fun = {
                     /**
