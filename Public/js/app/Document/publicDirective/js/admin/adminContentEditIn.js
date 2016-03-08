@@ -19,6 +19,7 @@ define(function (require) {
                 $scope.fun = {
                     contentList: function () {
                         cateData.getContent($scope.id, function (re) {
+                        	console.log('editInRe',re);
                             setTimeout(function () {
                                 $scope.$apply(function () {
                                     re = re[$scope.id];
