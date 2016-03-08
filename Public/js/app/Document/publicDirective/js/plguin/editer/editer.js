@@ -8,7 +8,9 @@ define(function (require) {
             link: function (scope, element, attrs) {
                 console.log('attrs',attrs);
                 scope.myEditer = attrs.myediter;
-                scope.content = attrs.content;
+                setTimeout(function(){
+                    scope.content = attrs.content;
+                },400);
                 console.log('attrsMyediter', attrs.myediter);
                 setTimeout(function () {
                     scope.$apply(function () {
