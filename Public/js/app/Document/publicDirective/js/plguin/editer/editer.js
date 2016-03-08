@@ -6,7 +6,7 @@ define(function (require) {
             scope: {},
             templateUrl: '/Public/js/app/Document/publicDirective/js/plguin/editer/html/editer.html',
             link: function (scope, element, attrs) {
-                console.log(attrs);
+                console.log('attrs',attrs);
                 scope.myEditer = attrs.myediter;
                 scope.content = attrs.content;
                 console.log('attrsMyediter', attrs.myediter);
@@ -47,7 +47,7 @@ define(function (require) {
                 }
 
                 function setEdit() {
-                    console.log(scope.content);
+                    console.log('scopeContent',scope.content);
                     UM.getEditor(attrs.myediter).setContent(scope.content);
                 }
 
