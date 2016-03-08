@@ -19,12 +19,13 @@ define(function (require) {
                 $scope.fun = {
                     contentList: function () {
                         cateData.getContent($scope.id, function (re) {
-                        	// console.log('editInRe',re);
+                            // console.log('editInRe',re);
                             setTimeout(function () {
                                 $scope.$apply(function () {
                                     // re = re[$scope.id];
                                     $scope.from.name = re.name;
                                     $scope.from.content = re.content;
+                                    $scope.content = re.content;
                                 })
                             }, 0);
                         })
@@ -72,7 +73,6 @@ define(function (require) {
                 scope.id = attrs.urlitem;
                 scope.title = attrs.title;
                 scope.content = attrs.editurl;
-                scope.content = 'ksdkfsdfk';
             }
         }
 
