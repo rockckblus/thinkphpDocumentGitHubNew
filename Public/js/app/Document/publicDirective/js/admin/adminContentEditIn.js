@@ -25,7 +25,7 @@ define(function (require) {
                                     // re = re[$scope.id];
                                     $scope.from.name = re.name;
                                     $scope.from.content = re.content;
-
+                                    $scope.content = re.content;
                                 })
                             }, 800);
                         })
