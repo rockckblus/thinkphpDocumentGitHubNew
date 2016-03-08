@@ -78,6 +78,7 @@ define(function (require) {
                 scope.title = attrs.title;
                 setTimeout(function () {
                     $scope.$apply(function () {
+                        console.log(scope.from.content);
                         scope.content = scope.from.content;
                     })
                 }, 0);
