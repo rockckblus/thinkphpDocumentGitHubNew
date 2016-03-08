@@ -8,7 +8,7 @@ define(function (require) {
             link: function (scope, element, attrs) {
                 console.log(attrs);
                 scope.myEditer = attrs.myediter;
-                scope.content=attrs.content;
+                scope.content = attrs.content;
                 console.log('attrsMyediter', attrs.myediter);
                 setTimeout(function () {
                     scope.$apply(function () {
@@ -52,9 +52,9 @@ define(function (require) {
                 }
 
 
-                setTimeout(function(){
+                setTimeout(function () {
                     setEdit();
-                },2000);
+                }, 2000);
 
                 document.getElementById('subMyEdit').addEventListener('click', function () {
                     subEdit();

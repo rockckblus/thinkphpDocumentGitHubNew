@@ -25,6 +25,10 @@ define(function (require) {
                                     // re = re[$scope.id];
                                     $scope.from.name = re.name;
                                     $scope.from.content = re.content;
+
+                                    /**
+                                     * 写入content
+                                     * 16/3/8 */
                                     $scope.content = re.content;
                                 })
                             }, 0);
@@ -72,7 +76,11 @@ define(function (require) {
             link: function (scope, element, attrs) {
                 scope.id = attrs.urlitem;
                 scope.title = attrs.title;
-                scope.content = attrs.editurl;
+                setTimeout(function () {
+                    $scope.$apply(function () {
+                        scope.content = scope.from.content;
+                    })
+                }, 0);
             }
         }
 
