@@ -6,12 +6,10 @@ define(function (require) {
             scope: {},
             templateUrl: '/Public/js/app/Document/publicDirective/js/plguin/editer/html/editer.html',
             link: function (scope, element, attrs) {
-                console.log('attrs',attrs);
                 scope.myEditer = attrs.myediter;
                 setTimeout(function(){
                     scope.content = attrs.content;
                 },400);
-                console.log('attrsMyediter', attrs.myediter);
                 setTimeout(function () {
                     scope.$apply(function () {
                         var um;
@@ -49,7 +47,6 @@ define(function (require) {
                 }
 
                 function setEdit() {
-                    console.log('scopeContent',scope.content);
                     UM.getEditor(attrs.myediter).setContent(scope.content);
                 }
 
